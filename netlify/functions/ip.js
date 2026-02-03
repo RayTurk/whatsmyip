@@ -1,13 +1,16 @@
-export async function handler() {
+export async function handler(event) {
   try {
-    const response = await fetch('https://ipapi.co/json/');
+    const clientIp =
+      event.headers['x-nf-client-connection-ip'] ||
+      event.headers['x-forwarded-for']?.split(',')[0];
+
+    const response = await fetch(`https://ipapi.co/${clientIp}/json/`);
     const data = await response.json();
 
     return {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        // Optional but nice
         'Cache-Control': 'public, max-age=300'
       },
       body: JSON.stringify(data)
