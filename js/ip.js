@@ -15,7 +15,7 @@ async function fetchIPInfo() {
   try {
     // IP lookup is a core feature, so we allow it even without ad consent
     // But we inform the user via privacy policy
-    const response = await fetch('https://ipapi.co/json/');
+    const response = await fetch('/.netlify/functions/ip');
 
     if (!response.ok) {
       throw new Error('Failed to fetch IP info');
