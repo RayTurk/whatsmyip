@@ -1,179 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find out your IP address, location, ISP, and browser information instantly. Free IP lookup tool with detailed network information.">
-    <meta name="keywords" content="what is my ip, my ip address, ip lookup, find my ip, ip location">
-    <title>What Is My IP Address? - Free IP Lookup Tool</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6JXCT6S');</script>
+    <!-- End Google Tag Manager -->
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Favicon (you can add later) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
-    
-    <style>
-        .card {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .skeleton {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-        }
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Find out your IP address, location, ISP, and browser information instantly. Free IP lookup tool with detailed network information.">
+  <meta name="keywords"
+        content="what is my ip, my ip address, ip lookup, find my ip, ip location">
+  <title>What Is My IP Address? - Free IP Lookup Tool</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (you can add later) -->
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+
+  <style>
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
+    }
+  </style>
 </head>
+
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold text-indigo-600">🌐 What's My IP</h1>
-                <nav class="space-x-6">
-                    <a href="/" class="text-gray-700 hover:text-indigo-600 font-medium">IP Lookup</a>
-                    <a href="/specs.html" class="text-gray-700 hover:text-indigo-600 font-medium">My Specs</a>
-                </nav>
-            </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-600">🌐 What's My IP</h1>
+        <nav class="space-x-6">
+          <a href="/"
+             class="text-gray-700 hover:text-indigo-600 font-medium">IP Lookup</a>
+          <a href="/specs.html"
+             class="text-gray-700 hover:text-indigo-600 font-medium">My Specs</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        What Is My IP Address?
+      </h2>
+      <p class="text-xl text-gray-600">
+        Instantly discover your public IP address and network information
+      </p>
+    </div>
+
+    <!-- IP Address Card (Main Feature) -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 card">
+      <div class="text-center">
+        <p class="text-gray-600 text-lg mb-2">Your IP Address</p>
+        <div id="ip-display"
+             class="text-5xl md:text-6xl font-bold text-indigo-600 mb-4">
+          <div class="skeleton h-16 w-64 mx-auto rounded"></div>
         </div>
-    </header>
+        <button id="copy-ip"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition hidden">
+          📋 Copy IP Address
+        </button>
+        <span id="copy-feedback"
+              class="text-green-600 font-medium ml-2 hidden">✓ Copied!</span>
+      </div>
+    </div>
 
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 py-12">
-        
-        <!-- Hero Section -->
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                What Is My IP Address?
-            </h2>
-            <p class="text-xl text-gray-600">
-                Instantly discover your public IP address and network information
-            </p>
+    <!-- Detailed Information Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+      <!-- Location Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">📍</span> Location
+        </h3>
+        <div id="location-info"
+             class="space-y-2">
+          <div class="skeleton h-6 w-full rounded mb-2"></div>
+          <div class="skeleton h-6 w-3/4 rounded mb-2"></div>
+          <div class="skeleton h-6 w-5/6 rounded"></div>
         </div>
+      </div>
 
-        <!-- IP Address Card (Main Feature) -->
-        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 card">
-            <div class="text-center">
-                <p class="text-gray-600 text-lg mb-2">Your IP Address</p>
-                <div id="ip-display" class="text-5xl md:text-6xl font-bold text-indigo-600 mb-4">
-                    <div class="skeleton h-16 w-64 mx-auto rounded"></div>
-                </div>
-                <button id="copy-ip" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition hidden">
-                    📋 Copy IP Address
-                </button>
-                <span id="copy-feedback" class="text-green-600 font-medium ml-2 hidden">✓ Copied!</span>
-            </div>
+      <!-- ISP Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">🏢</span> Internet Service Provider
+        </h3>
+        <div id="isp-info"
+             class="space-y-2">
+          <div class="skeleton h-6 w-full rounded mb-2"></div>
+          <div class="skeleton h-6 w-4/5 rounded"></div>
         </div>
+      </div>
 
-        <!-- Detailed Information Grid -->
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-            
-            <!-- Location Card -->
-            <div class="bg-white rounded-xl shadow-lg p-6 card">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                    <span class="text-2xl mr-2">📍</span> Location
-                </h3>
-                <div id="location-info" class="space-y-2">
-                    <div class="skeleton h-6 w-full rounded mb-2"></div>
-                    <div class="skeleton h-6 w-3/4 rounded mb-2"></div>
-                    <div class="skeleton h-6 w-5/6 rounded"></div>
-                </div>
-            </div>
-
-            <!-- ISP Card -->
-            <div class="bg-white rounded-xl shadow-lg p-6 card">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                    <span class="text-2xl mr-2">🏢</span> Internet Service Provider
-                </h3>
-                <div id="isp-info" class="space-y-2">
-                    <div class="skeleton h-6 w-full rounded mb-2"></div>
-                    <div class="skeleton h-6 w-4/5 rounded"></div>
-                </div>
-            </div>
-
-            <!-- Browser Card -->
-            <div class="bg-white rounded-xl shadow-lg p-6 card">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                    <span class="text-2xl mr-2">🌐</span> Browser
-                </h3>
-                <div id="browser-info" class="space-y-2">
-                    <div class="skeleton h-6 w-full rounded mb-2"></div>
-                    <div class="skeleton h-6 w-3/4 rounded"></div>
-                </div>
-            </div>
-
-            <!-- System Card -->
-            <div class="bg-white rounded-xl shadow-lg p-6 card">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                    <span class="text-2xl mr-2">💻</span> System
-                </h3>
-                <div id="system-info" class="space-y-2">
-                    <div class="skeleton h-6 w-full rounded mb-2"></div>
-                    <div class="skeleton h-6 w-4/5 rounded"></div>
-                </div>
-            </div>
+      <!-- Browser Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">🌐</span> Browser
+        </h3>
+        <div id="browser-info"
+             class="space-y-2">
+          <div class="skeleton h-6 w-full rounded mb-2"></div>
+          <div class="skeleton h-6 w-3/4 rounded"></div>
         </div>
+      </div>
 
-        <!-- CTA to Specs Page -->
-        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
-            <h3 class="text-2xl font-bold mb-2">Want More Details?</h3>
-            <p class="mb-4 text-indigo-100">Check out your complete hardware and device specifications</p>
-            <a href="/specs.html" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition">
-                View My Specs →
-            </a>
+      <!-- System Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">💻</span> System
+        </h3>
+        <div id="system-info"
+             class="space-y-2">
+          <div class="skeleton h-6 w-full rounded mb-2"></div>
+          <div class="skeleton h-6 w-4/5 rounded"></div>
         </div>
+      </div>
+    </div>
 
-        <!-- AdSense Placeholder -->
-        <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-500 border-2 border-dashed border-gray-300">
-            <p class="font-medium">Advertisement Space</p>
-            <p class="text-sm mt-1">728x90 or 336x280 ad unit</p>
-        </div>
+    <!-- CTA to Specs Page -->
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
+      <h3 class="text-2xl font-bold mb-2">Want More Details?</h3>
+      <p class="mb-4 text-indigo-100">Check out your complete hardware and device specifications</p>
+      <a href="/specs.html"
+         class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition">
+        View My Specs →
+      </a>
+    </div>
 
-        <!-- SEO Content Section -->
-        <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">About IP Addresses</h2>
-            <div class="prose max-w-none text-gray-600">
-                <p class="mb-4">
-                    An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to the internet. 
-                    It serves two main purposes: identifying your device and providing your location on the network.
-                </p>
-                <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Why Check Your IP Address?</h3>
-                <ul class="list-disc list-inside space-y-2 mb-4">
-                    <li>Troubleshoot network connectivity issues</li>
-                    <li>Configure network settings and firewalls</li>
-                    <li>Verify VPN or proxy connections</li>
-                    <li>Set up remote access to your devices</li>
-                    <li>Check if your location is being detected correctly</li>
-                </ul>
-                <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">IPv4 vs IPv6</h3>
-                <p class="mb-4">
-                    Your device may use IPv4 (e.g., 192.168.1.1) or the newer IPv6 format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). 
-                    IPv6 was introduced to address the shortage of IPv4 addresses as more devices connect to the internet.
-                </p>
-            </div>
-        </div>
+    <!-- AdSense Placeholder -->
+    <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-500 border-2 border-dashed border-gray-300">
+      <p class="font-medium">Advertisement Space</p>
+      <p class="text-sm mt-1">728x90 or 336x280 ad unit</p>
+    </div>
 
-    </main>
+    <!-- SEO Content Section -->
+    <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">About IP Addresses</h2>
+      <div class="prose max-w-none text-gray-600">
+        <p class="mb-4">
+          An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to
+          the internet.
+          It serves two main purposes: identifying your device and providing your location on the network.
+        </p>
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Why Check Your IP Address?</h3>
+        <ul class="list-disc list-inside space-y-2 mb-4">
+          <li>Troubleshoot network connectivity issues</li>
+          <li>Configure network settings and firewalls</li>
+          <li>Verify VPN or proxy connections</li>
+          <li>Set up remote access to your devices</li>
+          <li>Check if your location is being detected correctly</li>
+        </ul>
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">IPv4 vs IPv6</h3>
+        <p class="mb-4">
+          Your device may use IPv4 (e.g., 192.168.1.1) or the newer IPv6 format (e.g.,
+          2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+          IPv6 was introduced to address the shortage of IPv4 addresses as more devices connect to the internet.
+        </p>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
-            <p class="mb-2">© 2025 What's My IP - Free IP Lookup Tool</p>
-            <p class="text-sm">Your privacy matters. We don't store or track your IP address.</p>
-        </div>
-    </footer>
+  </main>
 
-    <!-- Scripts -->
-    <script src="/js/main.js"></script>
-    <script src="/js/ip.js"></script>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
+      <p class="mb-2">© 2025 What's My IP - Free IP Lookup Tool</p>
+      <p class="text-sm mb-2">Your privacy matters. We don't store or track your IP address.</p>
+      <p class="text-sm">
+        <a href="privacy.html"
+           class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+  <script src="/js/ip.js"></script>
 </body>
+
 </html>

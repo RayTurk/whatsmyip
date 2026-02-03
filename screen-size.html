@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6JXCT6S');</script>
+    <!-- End Google Tag Manager -->
+    
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Check your screen size, resolution, and display specifications instantly. Free screen resolution test and viewport detector.">
+  <meta name="keywords"
+        content="screen size, screen resolution, display size, viewport size, monitor resolution, what is my screen size">
+  <title>What Is My Screen Size? - Free Screen Resolution Checker</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
+
+  <style>
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-green-50 to-teal-100 min-h-screen">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-green-600">🖥️ What's My IP</h1>
+        <nav class="flex flex-wrap gap-4 text-sm md:text-base">
+          <a href="index.html"
+             class="text-gray-700 hover:text-green-600 font-medium">IP</a>
+          <a href="screen-size.html"
+             class="text-gray-700 hover:text-green-600 font-medium">Screen</a>
+          <a href="browser.html"
+             class="text-gray-700 hover:text-green-600 font-medium">Browser</a>
+          <a href="gpu.html"
+             class="text-gray-700 hover:text-green-600 font-medium">GPU</a>
+          <a href="device-info.html"
+             class="text-gray-700 hover:text-green-600 font-medium">Device</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        What Is My Screen Size?
+      </h2>
+      <p class="text-xl text-gray-600">
+        Instantly check your screen resolution, viewport size, and display specifications
+      </p>
+    </div>
+
+    <!-- Main Display Card -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 card">
+      <div class="text-center mb-6">
+        <p class="text-gray-600 text-lg mb-2">Your Screen Resolution</p>
+        <div id="screen-resolution"
+             class="text-5xl md:text-6xl font-bold text-green-600 mb-2">
+          <span id="screen-width">0</span> × <span id="screen-height">0</span>
+        </div>
+        <p class="text-gray-500">pixels</p>
+      </div>
+    </div>
+
+    <!-- Detailed Info Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+      <!-- Screen Info Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">📺</span> Screen Information
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Full Resolution:</span>
+            <span id="full-res"
+                  class="text-gray-800 font-mono">0 × 0</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Available Resolution:</span>
+            <span id="avail-res"
+                  class="text-gray-800 font-mono">0 × 0</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Color Depth:</span>
+            <span id="color-depth"
+                  class="text-gray-800 font-mono">0-bit</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold text-gray-600">Pixel Depth:</span>
+            <span id="pixel-depth"
+                  class="text-gray-800 font-mono">0-bit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viewport Info Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">🪟</span> Browser Viewport
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Viewport Size:</span>
+            <span id="viewport-size"
+                  class="text-gray-800 font-mono">0 × 0</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Pixel Ratio:</span>
+            <span id="pixel-ratio"
+                  class="text-gray-800 font-mono">1x</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Actual Pixels:</span>
+            <span id="actual-pixels"
+                  class="text-gray-800 font-mono">0 × 0</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold text-gray-600">Orientation:</span>
+            <span id="orientation"
+                  class="text-gray-800 font-mono">-</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Display Type Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">✨</span> Display Type
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Display Quality:</span>
+            <span id="display-quality"
+                  class="text-gray-800 font-semibold">-</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Aspect Ratio:</span>
+            <span id="aspect-ratio"
+                  class="text-gray-800 font-mono">-</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold text-gray-600">Total Pixels:</span>
+            <span id="total-pixels"
+                  class="text-gray-800 font-mono">-</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Device Category Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">📱</span> Device Category
+        </h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Device Type:</span>
+            <span id="device-type"
+                  class="text-gray-800 font-semibold">-</span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="font-semibold text-gray-600">Screen Size Category:</span>
+            <span id="size-category"
+                  class="text-gray-800">-</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold text-gray-600">Touch Support:</span>
+            <span id="touch-support"
+                  class="text-gray-800">-</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Related Tools CTA -->
+    <div class="bg-gradient-to-r from-green-500 to-teal-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
+      <h3 class="text-2xl font-bold mb-2">Check More Device Information</h3>
+      <p class="mb-4 text-green-100">Explore your complete system specifications</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="index.html"
+           class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
+          🌐 IP Address
+        </a>
+        <a href="browser.html"
+           class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
+          🌐 Browser Info
+        </a>
+        <a href="gpu.html"
+           class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
+          🎮 GPU Check
+        </a>
+      </div>
+    </div>
+
+    <!-- AdSense Placeholder -->
+    <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-500 border-2 border-dashed border-gray-300 mb-8">
+      <p class="font-medium">Advertisement Space</p>
+      <p class="text-sm mt-1">728x90 or 336x280 ad unit</p>
+    </div>
+
+    <!-- SEO Content Section -->
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">About Screen Size and Resolution</h2>
+      <div class="prose max-w-none text-gray-600 space-y-4">
+        <p>
+          Your screen size and resolution determine how much content you can see and how sharp it appears.
+          Screen resolution is measured in pixels (width × height), indicating the total number of individual
+          points of light your display can show.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Understanding Screen Resolution</h3>
+        <p>
+          Common screen resolutions include 1920×1080 (Full HD), 2560×1440 (2K/QHD), and 3840×2160 (4K/UHD).
+          Higher resolutions provide sharper images and more screen real estate but require more processing power.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Viewport vs. Screen Size</h3>
+        <p>
+          Your viewport is the visible area of your browser window, while screen resolution is your entire display.
+          The viewport is typically smaller than your screen resolution because of browser toolbars, operating
+          system taskbars, and window borders.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Pixel Ratio (Retina/HiDPI)</h3>
+        <p>
+          Modern displays often have a pixel ratio greater than 1x, meaning physical pixels are smaller than
+          CSS pixels. A 2x pixel ratio (Retina display) uses 4 physical pixels for every 1 CSS pixel,
+          resulting in sharper text and images. This is common on smartphones, tablets, and high-end laptops.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Why Check Your Screen Size?</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Optimize websites and applications for your display</li>
+          <li>Choose the right wallpaper or background image size</li>
+          <li>Verify monitor specifications when troubleshooting</li>
+          <li>Determine if your device supports certain resolutions</li>
+          <li>Check if you're getting true Retina/HiDPI quality</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
+      <p class="mb-2">© 2025 What's My IP - Free Device Information Tools</p>
+      <p class="text-sm mb-2">All detection happens locally in your browser. No data is stored.</p>
+      <p class="text-sm">
+        <a href="privacy.html"
+           class="text-green-600 hover:text-green-800 underline">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      detectScreenInfo();
+
+      // Update on window resize
+      window.addEventListener('resize', detectScreenInfo);
+    });
+
+    function detectScreenInfo() {
+      // Screen information
+      const screenWidth = screen.width;
+      const screenHeight = screen.height;
+      const availWidth = screen.availWidth;
+      const availHeight = screen.availHeight;
+      const colorDepth = screen.colorDepth;
+      const pixelDepth = screen.pixelDepth;
+
+      // Viewport information
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const pixelRatio = window.devicePixelRatio || 1;
+      const actualWidth = Math.round(viewportWidth * pixelRatio);
+      const actualHeight = Math.round(viewportHeight * pixelRatio);
+
+      // Orientation
+      const orientation = screen.orientation?.type || (screenWidth > screenHeight ? 'landscape' : 'portrait');
+
+      // Display main resolution
+      document.getElementById('screen-width').textContent = screenWidth;
+      document.getElementById('screen-height').textContent = screenHeight;
+
+      // Screen info
+      document.getElementById('full-res').textContent = `${screenWidth} × ${screenHeight}`;
+      document.getElementById('avail-res').textContent = `${availWidth} × ${availHeight}`;
+      document.getElementById('color-depth').textContent = `${colorDepth}-bit`;
+      document.getElementById('pixel-depth').textContent = `${pixelDepth}-bit`;
+
+      // Viewport info
+      document.getElementById('viewport-size').textContent = `${viewportWidth} × ${viewportHeight}`;
+      document.getElementById('pixel-ratio').textContent = `${pixelRatio}x${pixelRatio > 1 ? ' (Retina/HiDPI)' : ''}`;
+      document.getElementById('actual-pixels').textContent = `${actualWidth} × ${actualHeight}`;
+      document.getElementById('orientation').textContent = orientation;
+
+      // Display type
+      const totalPixels = (screenWidth * screenHeight).toLocaleString();
+      document.getElementById('total-pixels').textContent = totalPixels;
+
+      // Determine display quality
+      let quality = 'Standard Definition';
+      if (screenWidth >= 3840) quality = '4K/Ultra HD';
+      else if (screenWidth >= 2560) quality = '2K/Quad HD';
+      else if (screenWidth >= 1920) quality = 'Full HD';
+      else if (screenWidth >= 1280) quality = 'HD';
+
+      if (pixelRatio >= 2) quality += ' Retina';
+      document.getElementById('display-quality').textContent = quality;
+
+      // Aspect ratio
+      function gcd(a, b) {
+        return b === 0 ? a : gcd(b, a % b);
+      }
+      const divisor = gcd(screenWidth, screenHeight);
+      const aspectRatio = `${screenWidth / divisor}:${screenHeight / divisor}`;
+      document.getElementById('aspect-ratio').textContent = aspectRatio;
+
+      // Device type
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isTablet = /iPad|Tablet/i.test(navigator.userAgent);
+      let deviceType = 'Desktop';
+      if (isTablet) deviceType = 'Tablet';
+      else if (isMobile) deviceType = 'Mobile';
+      document.getElementById('device-type').textContent = deviceType;
+
+      // Size category
+      let sizeCategory = 'Standard';
+      if (screenWidth >= 3840) sizeCategory = 'Ultra Large (4K+)';
+      else if (screenWidth >= 2560) sizeCategory = 'Large (2K)';
+      else if (screenWidth >= 1920) sizeCategory = 'Standard (Full HD)';
+      else if (screenWidth >= 1280) sizeCategory = 'Medium (HD)';
+      else sizeCategory = 'Small/Mobile';
+      document.getElementById('size-category').textContent = sizeCategory;
+
+      // Touch support
+      const hasTouch = navigator.maxTouchPoints > 0 ? `Yes (${navigator.maxTouchPoints} points)` : 'No';
+      document.getElementById('touch-support').textContent = hasTouch;
+    }
+  </script>
+</body>
+
+</html>

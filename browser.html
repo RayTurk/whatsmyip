@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6JXCT6S');</script>
+    <!-- End Google Tag Manager -->
+    
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Check your browser name, version, and capabilities instantly. Free browser detector and compatibility checker.">
+  <meta name="keywords"
+        content="what is my browser, browser version, browser check, browser detector, user agent">
+  <title>What Is My Browser? - Free Browser Detection Tool</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+
+  <style>
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">🌐 What's My IP</h1>
+        <nav class="flex flex-wrap gap-4 text-sm md:text-base">
+          <a href="index.html"
+             class="text-gray-700 hover:text-blue-600 font-medium">IP</a>
+          <a href="screen-size.html"
+             class="text-gray-700 hover:text-blue-600 font-medium">Screen</a>
+          <a href="browser.html"
+             class="text-gray-700 hover:text-blue-600 font-medium">Browser</a>
+          <a href="gpu.html"
+             class="text-gray-700 hover:text-blue-600 font-medium">GPU</a>
+          <a href="device-info.html"
+             class="text-gray-700 hover:text-blue-600 font-medium">Device</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        What Is My Browser?
+      </h2>
+      <p class="text-xl text-gray-600">
+        Instantly identify your web browser, version, and capabilities
+      </p>
+    </div>
+
+    <!-- Main Display Card -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 card">
+      <div class="text-center mb-6">
+        <p class="text-gray-600 text-lg mb-2">You're Using</p>
+        <div id="browser-name"
+             class="text-5xl md:text-6xl font-bold text-blue-600 mb-2">
+          Loading...
+        </div>
+        <p id="browser-version"
+           class="text-2xl text-gray-600">Version loading...</p>
+      </div>
+    </div>
+
+    <!-- Detailed Info Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+      <!-- Browser Details Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">📋</span> Browser Details
+        </h3>
+        <div class="space-y-3"
+             id="browser-details">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- System Info Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">💻</span> System Information
+        </h3>
+        <div class="space-y-3"
+             id="system-info">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Browser Capabilities Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card md:col-span-2">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">✨</span> Browser Capabilities
+        </h3>
+        <div id="browser-capabilities"
+             class="flex flex-wrap gap-2">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- User Agent Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card md:col-span-2">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">🔍</span> User Agent String
+        </h3>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <code id="user-agent"
+                class="text-sm text-gray-700 break-all">Loading...</code>
+        </div>
+        <button id="copy-ua"
+                class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
+          📋 Copy User Agent
+        </button>
+        <span id="copy-feedback"
+              class="text-green-600 font-medium ml-2 hidden">✓ Copied!</span>
+      </div>
+
+    </div>
+
+    <!-- Related Tools CTA -->
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
+      <h3 class="text-2xl font-bold mb-2">Check More Information</h3>
+      <p class="mb-4 text-blue-100">Explore your complete device and network details</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="index.html"
+           class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition">
+          🌐 IP Address
+        </a>
+        <a href="screen-size.html"
+           class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition">
+          🖥️ Screen Size
+        </a>
+        <a href="gpu.html"
+           class="inline-block bg-white text-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-blue-50 transition">
+          🎮 GPU Info
+        </a>
+      </div>
+    </div>
+
+    <!-- AdSense Placeholder -->
+    <div class="bg-gray-100 rounded-xl p-8 text-center text-gray-500 border-2 border-dashed border-gray-300 mb-8">
+      <p class="font-medium">Advertisement Space</p>
+      <p class="text-sm mt-1">728x90 or 336x280 ad unit</p>
+    </div>
+
+    <!-- SEO Content Section -->
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">About Web Browsers</h2>
+      <div class="prose max-w-none text-gray-600 space-y-4">
+        <p>
+          A web browser is the software application you use to access websites on the internet. Popular browsers
+          include Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera. Each browser has different
+          features, performance characteristics, and compatibility with web standards.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Why Check Your Browser?</h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Verify you're using the latest version for security and features</li>
+          <li>Troubleshoot website compatibility issues</li>
+          <li>Determine if your browser supports specific web technologies</li>
+          <li>Get technical support or report bugs accurately</li>
+          <li>Check if you need to update to access certain websites</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Browser Version Numbers</h3>
+        <p>
+          Browser version numbers indicate the release and update level of your browser. Modern browsers use
+          rapid release cycles, with new versions every 4-6 weeks. Keeping your browser updated ensures you
+          have the latest security patches, performance improvements, and feature support.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">User Agent String</h3>
+        <p>
+          The user agent string is information your browser sends to websites, identifying the browser type,
+          version, operating system, and device. Websites use this to optimize content delivery and ensure
+          compatibility. Our tool displays your full user agent string for troubleshooting and development purposes.
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Browser Capabilities</h3>
+        <p>
+          Modern browsers support various web technologies like JavaScript, cookies, local storage, WebGL,
+          and more. Our tool checks which features your browser supports, helping you understand what web
+          applications and features will work correctly on your system.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
+      <p class="mb-2">© 2025 What's My IP - Free Device Information Tools</p>
+      <p class="text-sm mb-2">All detection happens locally in your browser.</p>
+      <p class="text-sm">
+        <a href="privacy.html"
+           class="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      detectBrowser();
+      setupCopyButton();
+    });
+
+    function detectBrowser() {
+      const ua = navigator.userAgent;
+      const info = parseBrowserInfo();
+
+      // Display main browser name and version
+      document.getElementById('browser-name').textContent = info.browserName;
+      document.getElementById('browser-version').textContent = `Version ${info.browserVersion}`;
+
+      // Browser details
+      const browserDetails = `
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Browser:</span>
+                    <span class="text-gray-800 font-semibold">${info.browserName}</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Version:</span>
+                    <span class="text-gray-800 font-mono">${info.browserVersion}</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Rendering Engine:</span>
+                    <span class="text-gray-800">${getRenderingEngine(info.browserName)}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="font-semibold text-gray-600">Language:</span>
+                    <span class="text-gray-800">${navigator.language}</span>
+                </div>
+            `;
+      document.getElementById('browser-details').innerHTML = browserDetails;
+
+      // System info
+      const systemInfo = `
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Operating System:</span>
+                    <span class="text-gray-800">${info.os}</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Device Type:</span>
+                    <span class="text-gray-800">${info.deviceType}</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-semibold text-gray-600">Architecture:</span>
+                    <span class="text-gray-800">${info.architecture}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="font-semibold text-gray-600">Online Status:</span>
+                    <span class="text-gray-800">${navigator.onLine ? '✓ Online' : '✗ Offline'}</span>
+                </div>
+            `;
+      document.getElementById('system-info').innerHTML = systemInfo;
+
+      // Browser capabilities
+      const capabilities = [];
+
+      if (navigator.cookieEnabled) capabilities.push('Cookies');
+      if ('localStorage' in window) capabilities.push('Local Storage');
+      if ('sessionStorage' in window) capabilities.push('Session Storage');
+      if ('indexedDB' in window) capabilities.push('IndexedDB');
+      if ('serviceWorker' in navigator) capabilities.push('Service Workers');
+      if ('Worker' in window) capabilities.push('Web Workers');
+      if ('WebAssembly' in window) capabilities.push('WebAssembly');
+
+      const canvas = document.createElement('canvas');
+      if (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')) {
+        capabilities.push('WebGL');
+      }
+
+      if ('geolocation' in navigator) capabilities.push('Geolocation');
+      if ('vibrate' in navigator) capabilities.push('Vibration API');
+      if ('getBattery' in navigator) capabilities.push('Battery API');
+      if ('RTCPeerConnection' in window) capabilities.push('WebRTC');
+      if (navigator.maxTouchPoints > 0) capabilities.push('Touch Support');
+      if (typeof navigator.javaEnabled === 'function' && navigator.javaEnabled()) capabilities.push('Java');
+      if (navigator.pdfViewerEnabled) capabilities.push('PDF Viewer');
+
+      const capabilitiesHTML = capabilities.map(cap =>
+        `<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">${cap}</span>`
+      ).join('');
+      document.getElementById('browser-capabilities').innerHTML = capabilitiesHTML;
+
+      // User agent
+      document.getElementById('user-agent').textContent = ua;
+    }
+
+    function getRenderingEngine(browserName) {
+      const engines = {
+        'Chrome': 'Blink',
+        'Edge': 'Blink',
+        'Opera': 'Blink',
+        'Firefox': 'Gecko',
+        'Safari': 'WebKit'
+      };
+      return engines[browserName] || 'Unknown';
+    }
+
+    function setupCopyButton() {
+      const copyButton = document.getElementById('copy-ua');
+
+      copyButton.addEventListener('click', async () => {
+        const ua = document.getElementById('user-agent').textContent;
+        const success = await copyToClipboard(ua);
+        if (success) {
+          const feedback = document.getElementById('copy-feedback');
+          feedback.classList.remove('hidden');
+          setTimeout(() => feedback.classList.add('hidden'), 2000);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
