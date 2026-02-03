@@ -80,6 +80,30 @@
 </head>
 
 <body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
+  <!-- Cookie Consent Banner -->
+  <div id="consent-banner"
+       class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm">
+        <p class="font-semibold mb-1">🍪 We use cookies and similar technologies</p>
+        <p class="text-gray-300">We use cookies for analytics and ads. By clicking "Accept", you consent to our use of
+          cookies.
+          <a href="privacy.html"
+             class="underline hover:text-white">Learn more</a>
+        </p>
+      </div>
+      <div class="flex gap-2 flex-shrink-0">
+        <button id="consent-reject"
+                class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium text-sm">
+          Reject
+        </button>
+        <button id="consent-accept"
+                class="px-6 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-medium text-sm">
+          Accept All
+        </button>
+      </div>
+    </div>
+  </div>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
             height="0"
@@ -283,6 +307,71 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script src="js/specs.js"></script>
+  <!-- Consent Management Script -->
+  <script>
+    // Google Consent Mode defaults
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Set default consent state (denied)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+
+    // Check if user has already made a choice
+    const consentStatus = localStorage.getItem('cookie_consent');
+
+    if (consentStatus === 'accepted') {
+      // User previously accepted - grant consent
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      // Allow IP fetch
+      window.consentGranted = true;
+    } else if (consentStatus === 'rejected') {
+      // User rejected - keep denied
+      window.consentGranted = false;
+    } else {
+      // No choice yet - show banner
+      document.getElementById('consent-banner').classList.remove('hidden');
+      // Allow basic IP fetch even without consent (it's your own API call, not ads)
+      window.consentGranted = true;
+    }
+
+    // Handle Accept button
+    document.getElementById('consent-accept')?.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'accepted');
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      window.consentGranted = true;
+      document.getElementById('consent-banner').classList.add('hidden');
+      // Reload to fetch IP if not already loaded
+      if (!document.querySelector('.ip-address')?.textContent) {
+        location.reload();
+      }
+    });
+
+    // Handle Reject button
+    document.getElementById('consent-reject')?.addEventListener('click', function () {
+      localStorage.setItem('cookie_consent', 'rejected');
+      window.consentGranted = false;
+      document.getElementById('consent-banner').classList.add('hidden');
+      // Allow IP fetch even if ads rejected (it's a core feature)
+      if (!document.querySelector('.ip-address')?.textContent) {
+        location.reload();
+      }
+    });
+  </script>
 </body>
 
 </html>
