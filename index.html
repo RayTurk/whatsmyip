@@ -158,17 +158,17 @@
     <div class="max-w-6xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
         <a href="index.html"
-           class="flex items-center">
+           class="flex items-center flex-shrink-0">
           <picture>
             <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
             <img src="images/deviceinfo-io_logo.png"
                  alt="DeviceInfo.io"
-                 class="h-8 md:h-10"
+                 class="h-8 md:h-10 w-auto"
                  width="1536" height="370"
                  decoding="async">
           </picture>
         </a>
-        <nav class="flex flex-wrap gap-4 text-sm md:text-base">
+        <nav class="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
           <a href="index.html"
              class="text-gray-700 hover:text-indigo-600 font-medium">IP</a>
           <a href="screen-size.html"
@@ -202,7 +202,7 @@
       <div class="text-center">
         <p class="text-gray-600 text-lg mb-2">Your IP Address</p>
         <div id="ip-display"
-             class="text-5xl md:text-6xl font-bold text-indigo-600 mb-4">
+             class="text-2xl sm:text-4xl md:text-6xl font-bold text-indigo-600 mb-4 break-all">
           <div class="skeleton h-16 w-64 mx-auto rounded"></div>
         </div>
         <button id="copy-ip"
