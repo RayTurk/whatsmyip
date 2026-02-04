@@ -13,41 +13,21 @@
     })(window, document, 'script', 'dataLayer', 'GTM-K6JXCT6S');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- AdSense -->
-  <script async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
-          crossorigin="anonymous"></script>
-
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="Find out your IP address, location, ISP, and browser information instantly. Free IP lookup tool with detailed network information.">
+        content="Check your device specifications, hardware info, screen resolution, GPU, CPU cores, and browser details instantly.">
   <meta name="keywords"
-        content="what is my ip, my ip address, ip lookup, find my ip, ip location">
-  <title>What Is My IP Address? - Free IP Lookup Tool</title>
-
-  <link rel="canonical"
-        href="https://deviceinfo.io/">
-  <meta property="og:title"
-        content="What Is My IP Address? - Free IP Lookup Tool">
-  <meta property="og:description"
-        content="Find out your IP address, location, ISP, and browser information instantly. Free IP lookup tool with detailed network information.">
-  <meta property="og:url"
-        content="https://deviceinfo.io/">
-  <meta property="og:type"
-        content="website">
-  <meta property="og:image"
-        content="https://deviceinfo.io/images/deviceinfo-io_logo.png">
-  <meta name="twitter:card"
-        content="summary_large_image">
+        content="device specs, hardware info, gpu detector, screen resolution, system information">
+  <title>What Are My Device Specs? - Hardware Detection Tool</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon (you can add later) -->
+  <!-- Favicon -->
   <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
   <style>
     .card {
@@ -57,6 +37,28 @@
     .card:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .spec-value {
+      color: #1f2937;
+      text-align: right;
+      font-family: 'Courier New', monospace;
     }
 
     .skeleton {
@@ -75,73 +77,9 @@
       }
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "DeviceInfo.io - IP Lookup",
-    "url": "https://deviceinfo.io/",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Any",
-    "description": "Find out your IP address, location, ISP, and browser information instantly. Free IP lookup tool with detailed network information.",
-    "offers": { "@type": "Offer", "price": "0" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "DeviceInfo.io",
-    "url": "https://deviceinfo.io/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://deviceinfo.io/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://deviceinfo.io/"
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is my IP address?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your IP address is a unique numerical label assigned to your device on the internet. Use our free tool to instantly find your public IP address, location, and ISP information."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between IPv4 and IPv6?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IPv4 uses a 32-bit address format (e.g., 192.168.1.1) while IPv6 uses a 128-bit format (e.g., 2001:0db8:85a3::8a2e:0370:7334). IPv6 was introduced to address the shortage of available IPv4 addresses."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+<body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
   <!-- Cookie Consent Banner -->
   <div id="consent-banner"
        class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
@@ -178,23 +116,18 @@
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <a href="index.html"
-           class="flex items-center">
-          <img src="images/deviceinfo-io_logo.png"
-               alt="DeviceInfo.io"
-               class="h-8 md:h-10">
-        </a>
+        <h1 class="text-2xl font-bold text-purple-600">💻 What's My IP</h1>
         <nav class="flex flex-wrap gap-4 text-sm md:text-base">
           <a href="index.html"
-             class="text-gray-700 hover:text-indigo-600 font-medium">IP</a>
+             class="text-gray-700 hover:text-purple-600 font-medium">IP</a>
           <a href="screen-size.html"
-             class="text-gray-700 hover:text-indigo-600 font-medium">Screen</a>
+             class="text-gray-700 hover:text-purple-600 font-medium">Screen</a>
           <a href="browser.html"
-             class="text-gray-700 hover:text-indigo-600 font-medium">Browser</a>
+             class="text-gray-700 hover:text-purple-600 font-medium">Browser</a>
           <a href="gpu.html"
-             class="text-gray-700 hover:text-indigo-600 font-medium">GPU</a>
-          <a href="specs.html"
-             class="text-gray-700 hover:text-indigo-600 font-medium">Specs</a>
+             class="text-gray-700 hover:text-purple-600 font-medium">GPU</a>
+          <a href="device-info.html"
+             class="text-gray-700 hover:text-purple-600 font-medium">Device</a>
         </nav>
       </div>
     </div>
@@ -206,54 +139,61 @@
     <!-- Hero Section -->
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        What Is My IP Address?
+        What Are My Device Specs?
       </h2>
       <p class="text-xl text-gray-600">
-        Instantly discover your public IP address and network information
+        Comprehensive hardware and system information detection
       </p>
     </div>
 
-    <!-- IP Address Card (Main Feature) -->
-    <div class="bg-white rounded-2xl shadow-xl p-8 mb-8 card">
-      <div class="text-center">
-        <p class="text-gray-600 text-lg mb-2">Your IP Address</p>
-        <div id="ip-display"
-             class="text-5xl md:text-6xl font-bold text-indigo-600 mb-4">
-          <div class="skeleton h-16 w-64 mx-auto rounded"></div>
-        </div>
-        <button id="copy-ip"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition hidden">
-          📋 Copy IP Address
-        </button>
-        <span id="copy-feedback"
-              class="text-green-600 font-medium ml-2 hidden">✓ Copied!</span>
-      </div>
-    </div>
-
-    <!-- Detailed Information Grid -->
+    <!-- Specs Grid -->
     <div class="grid md:grid-cols-2 gap-6 mb-8">
 
-      <!-- Location Card -->
+      <!-- Display Card -->
       <div class="bg-white rounded-xl shadow-lg p-6 card">
         <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <span class="text-2xl mr-2">📍</span> Location
+          <span class="text-2xl mr-2">🖥️</span> Display
         </h3>
-        <div id="location-info"
-             class="space-y-2">
-          <div class="skeleton h-6 w-full rounded mb-2"></div>
-          <div class="skeleton h-6 w-3/4 rounded mb-2"></div>
-          <div class="skeleton h-6 w-5/6 rounded"></div>
+        <div id="display-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-4/5 rounded mb-3"></div>
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-3/4 rounded"></div>
         </div>
       </div>
 
-      <!-- ISP Card -->
+      <!-- Hardware Card -->
       <div class="bg-white rounded-xl shadow-lg p-6 card">
         <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <span class="text-2xl mr-2">🏢</span> Internet Service Provider
+          <span class="text-2xl mr-2">⚙️</span> Hardware
         </h3>
-        <div id="isp-info"
-             class="space-y-2">
-          <div class="skeleton h-6 w-full rounded mb-2"></div>
+        <div id="hardware-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-5/6 rounded mb-3"></div>
+          <div class="skeleton h-6 w-4/5 rounded"></div>
+        </div>
+      </div>
+
+      <!-- GPU Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">🎮</span> Graphics (GPU)
+        </h3>
+        <div id="gpu-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-4/5 rounded mb-3"></div>
+          <div class="skeleton h-6 w-full rounded"></div>
+        </div>
+      </div>
+
+      <!-- System Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">💻</span> System
+        </h3>
+        <div id="system-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-5/6 rounded mb-3"></div>
           <div class="skeleton h-6 w-4/5 rounded"></div>
         </div>
       </div>
@@ -263,34 +203,47 @@
         <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
           <span class="text-2xl mr-2">🌐</span> Browser
         </h3>
-        <div id="browser-info"
-             class="space-y-2">
-          <div class="skeleton h-6 w-full rounded mb-2"></div>
+        <div id="browser-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-4/5 rounded mb-3"></div>
+          <div class="skeleton h-6 w-full rounded"></div>
+        </div>
+      </div>
+
+      <!-- Network Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card">
+        <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <span class="text-2xl mr-2">📡</span> Network
+        </h3>
+        <div id="network-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-5/6 rounded mb-3"></div>
           <div class="skeleton h-6 w-3/4 rounded"></div>
         </div>
       </div>
 
-      <!-- System Card -->
-      <div class="bg-white rounded-xl shadow-lg p-6 card">
+      <!-- Features Card -->
+      <div class="bg-white rounded-xl shadow-lg p-6 card md:col-span-2">
         <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
-          <span class="text-2xl mr-2">💻</span> System
+          <span class="text-2xl mr-2">✨</span> Device Features
         </h3>
-        <div id="system-info"
-             class="space-y-2">
-          <div class="skeleton h-6 w-full rounded mb-2"></div>
-          <div class="skeleton h-6 w-4/5 rounded"></div>
+        <div id="features-info">
+          <div class="skeleton h-6 w-full rounded mb-3"></div>
+          <div class="skeleton h-6 w-4/5 rounded mb-3"></div>
+          <div class="skeleton h-6 w-5/6 rounded"></div>
         </div>
       </div>
+
     </div>
 
-    <!-- CTA to Specs Page -->
-    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
-      <h3 class="text-2xl font-bold mb-2">Want More Details?</h3>
-      <p class="mb-4 text-indigo-100">Check out your complete hardware and device specifications</p>
-      <a href="specs.html"
-         class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition">
-        View My Specs →
-      </a>
+    <!-- Copy All Button -->
+    <div class="text-center mb-8">
+      <button id="copy-all-specs"
+              class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-bold transition">
+        📋 Copy All Specs
+      </button>
+      <span id="copy-feedback"
+            class="text-green-600 font-medium ml-2 hidden">✓ Copied to clipboard!</span>
     </div>
 
     <!-- AdSense Placeholder -->
@@ -306,28 +259,40 @@
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
+    <!-- CTA Back to IP -->
+    <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
+      <h3 class="text-2xl font-bold mb-2">Need Your IP Address?</h3>
+      <p class="mb-4 text-purple-100">Check your public IP address and location information</p>
+      <a href="index.html"
+         class="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition">
+        ← View My IP Address
+      </a>
+    </div>
+
     <!-- SEO Content Section -->
-    <div class="mt-12 bg-white rounded-xl shadow-lg p-8">
-      <h2 class="text-2xl font-bold text-gray-800 mb-4">About IP Addresses</h2>
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Understanding Your Device Specifications</h2>
       <div class="prose max-w-none text-gray-600">
         <p class="mb-4">
-          An IP address (Internet Protocol address) is a unique numerical label assigned to every device connected to
-          the internet.
-          It serves two main purposes: identifying your device and providing your location on the network.
+          Your device specifications reveal important details about your computer or mobile device's capabilities.
+          This information is useful for troubleshooting, checking system requirements for software and games,
+          and understanding your hardware's performance potential.
         </p>
-        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Why Check Your IP Address?</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">What Can Be Detected?</h3>
         <ul class="list-disc list-inside space-y-2 mb-4">
-          <li>Troubleshoot network connectivity issues</li>
-          <li>Configure network settings and firewalls</li>
-          <li>Verify VPN or proxy connections</li>
-          <li>Set up remote access to your devices</li>
-          <li>Check if your location is being detected correctly</li>
+          <li><strong>Display:</strong> Screen resolution, pixel density, color depth, and viewport size</li>
+          <li><strong>Hardware:</strong> CPU cores, available memory (RAM), and device type</li>
+          <li><strong>GPU:</strong> Graphics card vendor and model (via WebGL)</li>
+          <li><strong>System:</strong> Operating system, architecture (32-bit vs 64-bit), and platform</li>
+          <li><strong>Browser:</strong> Browser type, version, and supported features</li>
+          <li><strong>Network:</strong> Connection type and online status</li>
         </ul>
-        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">IPv4 vs IPv6</h3>
+        <h3 class="text-xl font-bold text-gray-800 mb-2 mt-6">Limitations</h3>
         <p class="mb-4">
-          Your device may use IPv4 (e.g., 192.168.1.1) or the newer IPv6 format (e.g.,
-          2001:0db8:85a3:0000:0000:8a2e:0370:7334).
-          IPv6 was introduced to address the shortage of IPv4 addresses as more devices connect to the internet.
+          Due to browser security and privacy restrictions, we can only detect information that's exposed through
+          standard web APIs. We cannot access detailed hardware information like exact CPU models, motherboard details,
+          or storage capacity. For complete system information, use your operating system's built-in tools
+          (System Information on Windows, About This Mac on macOS, or system monitoring tools on Linux).
         </p>
       </div>
     </div>
@@ -348,7 +313,7 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/ip.js"></script>
+  <script src="js/specs.js"></script>
   <!-- Consent Management Script -->
   <script>
     // Google Consent Mode defaults
