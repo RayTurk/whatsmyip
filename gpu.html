@@ -26,20 +26,15 @@
   <meta name="twitter:card"
         content="summary_large_image">
 
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
-
-  <style>
-    .card {
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-  </style>
 
   <script type="application/ld+json">
   {
@@ -107,9 +102,14 @@
       <div class="flex justify-between items-center">
         <a href="index.html"
            class="flex items-center">
-          <img src="images/deviceinfo-io_logo.png"
-               alt="DeviceInfo.io"
-               class="h-8 md:h-10">
+          <picture>
+            <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
+            <img src="images/deviceinfo-io_logo.png"
+                 alt="DeviceInfo.io"
+                 class="h-8 md:h-10"
+                 width="1536" height="370"
+                 decoding="async">
+          </picture>
         </a>
         <nav class="flex flex-wrap gap-4 text-sm md:text-base">
           <a href="index.html"

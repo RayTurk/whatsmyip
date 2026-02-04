@@ -13,6 +13,12 @@
     })(window, document, 'script', 'dataLayer', 'GTM-K6JXCT6S');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
@@ -23,60 +29,13 @@
   <title>What Are My Device Specs? - Hardware Detection Tool</title>
 
   <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="/css/styles.css">
 
   <!-- Favicon -->
   <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 
-  <style>
-    .card {
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .spec-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .spec-row:last-child {
-      border-bottom: none;
-    }
-
-    .spec-label {
-      font-weight: 600;
-      color: #4b5563;
-    }
-
-    .spec-value {
-      color: #1f2937;
-      text-align: right;
-      font-family: 'Courier New', monospace;
-    }
-
-    .skeleton {
-      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200% 100%;
-      animation: loading 1.5s infinite;
-    }
-
-    @keyframes loading {
-      0% {
-        background-position: 200% 0;
-      }
-
-      100% {
-        background-position: -200% 0;
-      }
-    }
-  </style>
 </head>
 
 <body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
@@ -312,8 +271,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/specs.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/specs.js" defer></script>
   <!-- Consent Management Script -->
   <script>
     // Google Consent Mode defaults
