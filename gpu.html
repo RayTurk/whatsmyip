@@ -11,6 +11,14 @@
         content="what is my gpu, graphics card check, gpu detector, video card, graphics card finder">
   <title>What Is My GPU? - Free Graphics Card Detector</title>
 
+  <link rel="canonical" href="https://deviceinfo.io/gpu.html">
+  <meta property="og:title" content="What Is My GPU? - Free Graphics Card Detector">
+  <meta property="og:description" content="Check your GPU (graphics card) model, vendor, and specifications instantly. Free graphics card detector for gamers and developers.">
+  <meta property="og:url" content="https://deviceinfo.io/gpu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://deviceinfo.io/images/deviceinfo-io_logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
@@ -25,6 +33,39 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DeviceInfo.io - GPU Detector",
+    "url": "https://deviceinfo.io/gpu.html",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "description": "Check your GPU (graphics card) model, vendor, and specifications instantly. Free graphics card detector for gamers and developers.",
+    "offers": { "@type": "Offer", "price": "0" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://deviceinfo.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GPU Info",
+        "item": "https://deviceinfo.io/gpu.html"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
@@ -57,7 +98,9 @@
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-purple-600">🎮 What's My IP</h1>
+        <a href="index.html" class="flex items-center">
+          <img src="images/deviceinfo-io_logo.png" alt="DeviceInfo.io" class="h-8 md:h-10">
+        </a>
         <nav class="flex flex-wrap gap-4 text-sm md:text-base">
           <a href="index.html"
              class="text-gray-700 hover:text-purple-600 font-medium">IP</a>
@@ -67,8 +110,8 @@
              class="text-gray-700 hover:text-purple-600 font-medium">Browser</a>
           <a href="gpu.html"
              class="text-gray-700 hover:text-purple-600 font-medium">GPU</a>
-          <a href="device-info.html"
-             class="text-gray-700 hover:text-purple-600 font-medium">Device</a>
+          <a href="specs.html"
+             class="text-gray-700 hover:text-purple-600 font-medium">Specs</a>
         </nav>
       </div>
     </div>
@@ -148,7 +191,7 @@
       <h3 class="text-2xl font-bold mb-2">Check More System Information</h3>
       <p class="mb-4 text-purple-100">Explore your complete hardware specifications</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="device-info.html"
+        <a href="specs.html"
            class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
           💻 Full Device Info
         </a>
