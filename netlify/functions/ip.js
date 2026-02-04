@@ -1,9 +1,11 @@
 let cachedIPInfo = null;
 let cacheTime = 0;
 
-export async function handler() {
+export async function handler(event) {
+  const clientIP = event.headers['x-nf-client-connection-ip'] || event.headers['client-ip'] || event.headers['x-forwarded-for']?.split(',')[0]?.trim();
+
   const now = Date.now();
-  if (cachedIPInfo && (now - cacheTime < 5 * 60 * 1000)) {
+  if (cachedIPInfo && cachedIPInfo.ip === clientIP && (now - cacheTime < 5 * 60 * 1000)) {
     return {
       statusCode: 200,
       body: JSON.stringify(cachedIPInfo),
@@ -11,7 +13,7 @@ export async function handler() {
   }
 
   try {
-    const response = await fetch('https://ipapi.co/json/');
+    const response = await fetch(`https://ipapi.co/${clientIP}/json/`);
     const data = await response.json();
     cachedIPInfo = data;
     cacheTime = now;
