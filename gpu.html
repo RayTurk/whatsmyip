@@ -2,6 +2,28 @@
 <html lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K6JXCT6S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- AdSense -->
+  <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
+          crossorigin="anonymous"></script>
+
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
@@ -25,12 +47,6 @@
         content="https://deviceinfo.io/images/deviceinfo-io_logo.png">
   <meta name="twitter:card"
         content="summary_large_image">
-
-  <!-- Preconnect hints -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon"
@@ -68,6 +84,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can I find out what GPU I have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can find out what GPU you have by using our free online GPU detector, which uses WebGL to identify your graphics card model and vendor instantly in your browser. Alternatively, on Windows you can check Device Manager or run dxdiag, on macOS use About This Mac > System Report, and on Linux use the lspci command."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between an integrated and dedicated GPU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An integrated GPU is built into the CPU and shares system RAM, making it power-efficient but less powerful. A dedicated GPU is a separate card with its own video memory (VRAM), offering significantly better performance for gaming, video editing, 3D rendering, and other graphics-intensive tasks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my browser show a different GPU than expected?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Browsers may report a different GPU because many laptops and desktops have both integrated and dedicated graphics. Browsers often default to the integrated GPU for power savings. You can change this in your GPU control panel (NVIDIA Control Panel or AMD Radeon Settings) by setting the browser to use the high-performance GPU."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a website detect my GPU's VRAM or clock speed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, websites cannot detect detailed GPU specifications like VRAM size, clock speeds, or temperature through a browser. Web-based detection is limited to the GPU model name and vendor via the WebGL API. For full specifications, use native tools like GPU-Z on Windows, System Information on macOS, or glxinfo on Linux."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
@@ -79,7 +135,7 @@
         <p class="font-semibold mb-1">🍪 We use cookies and similar technologies</p>
         <p class="text-gray-300">We use cookies for analytics and ads. By clicking "Accept", you consent to our use of
           cookies.
-          <a href="https://deviceinfo.io/privacy.html"
+          <a href="/privacy.html"
              class="underline hover:text-white">Learn more</a>
         </p>
       </div>
@@ -95,12 +151,18 @@
       </div>
     </div>
   </div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Header -->
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <a href="https://deviceinfo.io/"
+        <a href="/"
            class="flex items-center flex-shrink-0">
           <picture>
             <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
@@ -112,15 +174,15 @@
           </picture>
         </a>
         <nav class="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
-          <a href="https://deviceinfo.io/"
+          <a href="/"
              class="text-gray-700 hover:text-purple-600 font-medium">IP</a>
-          <a href="https://deviceinfo.io/screen-size.html"
+          <a href="/screen-size.html"
              class="text-gray-700 hover:text-purple-600 font-medium">Screen</a>
-          <a href="https://deviceinfo.io/browser.html"
+          <a href="/browser.html"
              class="text-gray-700 hover:text-purple-600 font-medium">Browser</a>
-          <a href="https://deviceinfo.io/gpu.html"
+          <a href="/gpu.html"
              class="text-gray-700 hover:text-purple-600 font-medium">GPU</a>
-          <a href="https://deviceinfo.io/specs.html"
+          <a href="/specs.html"
              class="text-gray-700 hover:text-purple-600 font-medium">Specs</a>
         </nav>
       </div>
@@ -201,26 +263,22 @@
       <h3 class="text-2xl font-bold mb-2">Check More System Information</h3>
       <p class="mb-4 text-purple-100">Explore your complete hardware specifications</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="https://deviceinfo.io/specs.html"
+        <a href="/specs.html"
            class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
           💻 Full Device Info
         </a>
-        <a href="https://deviceinfo.io/screen-size.html"
+        <a href="/screen-size.html"
            class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
           🖥️ Screen Size
         </a>
-        <a href="https://deviceinfo.io/browser.html"
+        <a href="/browser.html"
            class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
           🌐 Browser Info
         </a>
       </div>
     </div>
 
-    <!-- AdSense Placeholder -->
-    <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
-            crossorigin="anonymous"></script>
-    <!-- Homepage Ad Space -->
+    <!-- Ad Space -->
     <ins class="adsbygoogle"
          style="display:inline-block;width:728px;height:90px"
          data-ad-client="ca-pub-9529757615457255"
@@ -283,15 +341,55 @@
       </div>
     </div>
 
+    <!-- FAQ Section -->
+    <div class="mt-8 bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">How can I find out what GPU I have?</h3>
+          <p class="text-gray-600">
+            You can find out what GPU you have by using our free online GPU detector, which uses WebGL to identify
+            your graphics card model and vendor instantly in your browser. Alternatively, on Windows you can check
+            Device Manager or run dxdiag, on macOS use About This Mac > System Report, and on Linux use the lspci command.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between an integrated and dedicated GPU?</h3>
+          <p class="text-gray-600">
+            An integrated GPU is built into the CPU and shares system RAM, making it power-efficient but less powerful.
+            A dedicated GPU is a separate card with its own video memory (VRAM), offering significantly better performance
+            for gaming, video editing, 3D rendering, and other graphics-intensive tasks.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Why does my browser show a different GPU than expected?</h3>
+          <p class="text-gray-600">
+            Browsers may report a different GPU because many laptops and desktops have both integrated and dedicated
+            graphics. Browsers often default to the integrated GPU for power savings. You can change this in your
+            GPU control panel (NVIDIA Control Panel or AMD Radeon Settings) by setting the browser to use the
+            high-performance GPU.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Can a website detect my GPU's VRAM or clock speed?</h3>
+          <p class="text-gray-600">
+            No, websites cannot detect detailed GPU specifications like VRAM size, clock speeds, or temperature through
+            a browser. Web-based detection is limited to the GPU model name and vendor via the WebGL API. For full
+            specifications, use native tools like GPU-Z on Windows, System Information on macOS, or glxinfo on Linux.
+          </p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-gray-200 mt-12">
     <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
-      <p class="mb-2">© 2025 What's My IP - Free Device Information Tools</p>
+      <p class="mb-2">© 2026 What's My IP - Free Device Information Tools</p>
       <p class="text-sm mb-2">All detection happens locally in your browser. No data is stored.</p>
       <p class="text-sm">
-        <a href="https://deviceinfo.io/privacy.html"
+        <a href="/privacy.html"
            class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
       </p>
     </div>
