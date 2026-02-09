@@ -13,6 +13,11 @@
     })(window, document, 'script', 'dataLayer', 'GTM-K6JXCT6S');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- AdSense -->
+  <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
+          crossorigin="anonymous"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
@@ -79,6 +84,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I check my screen resolution?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can check your screen resolution instantly using our free online tool, which detects your display size, viewport, and pixel ratio directly in your browser. You can also check on Windows via Settings > Display, on macOS via System Settings > Displays, or on Linux through your display settings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between screen resolution and viewport size?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Screen resolution is the total number of pixels your physical display can show (e.g., 1920x1080), while viewport size is the visible area within your browser window. The viewport is typically smaller than screen resolution because it excludes browser toolbars, the address bar, and operating system elements like the taskbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does pixel ratio (Retina/HiDPI) mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pixel ratio indicates how many physical pixels are used to render one CSS pixel. A 2x ratio (common on Retina displays) means 4 physical pixels render each logical pixel, producing sharper text and images. Most modern smartphones have a 2x or 3x pixel ratio, while standard desktop monitors typically have a 1x ratio."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is my screen's aspect ratio and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your screen's aspect ratio is the proportional relationship between its width and height. Common ratios include 16:9 (widescreen), 16:10 (common on laptops), and 21:9 (ultrawide). Aspect ratio matters for video playback, gaming, and productivity — a wider ratio provides more horizontal workspace while a taller ratio is better for reading and coding."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-gradient-to-br from-green-50 to-teal-100 min-h-screen">
@@ -90,7 +135,7 @@
         <p class="font-semibold mb-1">🍪 We use cookies and similar technologies</p>
         <p class="text-gray-300">We use cookies for analytics and ads. By clicking "Accept", you consent to our use of
           cookies.
-          <a href="https://deviceinfo.io/privacy.html"
+          <a href="/privacy.html"
              class="underline hover:text-white">Learn more</a>
         </p>
       </div>
@@ -118,7 +163,7 @@
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <a href="https://deviceinfo.io/"
+        <a href="/"
            class="flex items-center flex-shrink-0">
           <picture>
             <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
@@ -130,15 +175,15 @@
           </picture>
         </a>
         <nav class="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
-          <a href="https://deviceinfo.io/"
+          <a href="/"
              class="text-gray-700 hover:text-green-600 font-medium">IP</a>
-          <a href="https://deviceinfo.io/screen-size.html"
+          <a href="/screen-size.html"
              class="text-gray-700 hover:text-green-600 font-medium">Screen</a>
-          <a href="https://deviceinfo.io/browser.html"
+          <a href="/browser.html"
              class="text-gray-700 hover:text-green-600 font-medium">Browser</a>
-          <a href="https://deviceinfo.io/gpu.html"
+          <a href="/gpu.html"
              class="text-gray-700 hover:text-green-600 font-medium">GPU</a>
-          <a href="https://deviceinfo.io/specs.html"
+          <a href="/specs.html"
              class="text-gray-700 hover:text-green-600 font-medium">Specs</a>
         </nav>
       </div>
@@ -286,26 +331,22 @@
       <h3 class="text-2xl font-bold mb-2">Check More Device Information</h3>
       <p class="mb-4 text-green-100">Explore your complete system specifications</p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="https://deviceinfo.io/"
+        <a href="/"
            class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
           🌐 IP Address
         </a>
-        <a href="https://deviceinfo.io/browser.html"
+        <a href="/browser.html"
            class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
           🌐 Browser Info
         </a>
-        <a href="https://deviceinfo.io/gpu.html"
+        <a href="/gpu.html"
            class="inline-block bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-green-50 transition">
           🎮 GPU Check
         </a>
       </div>
     </div>
 
-    <!-- AdSense Placeholder -->
-    <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
-            crossorigin="anonymous"></script>
-    <!-- Homepage Ad Space -->
+    <!-- Ad Space -->
     <ins class="adsbygoogle"
          style="display:inline-block;width:728px;height:90px"
          data-ad-client="ca-pub-9529757615457255"
@@ -355,15 +396,57 @@
       </div>
     </div>
 
+    <!-- FAQ Section -->
+    <div class="mt-8 bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">How do I check my screen resolution?</h3>
+          <p class="text-gray-600">
+            You can check your screen resolution instantly using our free online tool, which detects your display
+            size, viewport, and pixel ratio directly in your browser. You can also check on Windows via
+            Settings > Display, on macOS via System Settings > Displays, or on Linux through your display settings.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between screen resolution and viewport size?</h3>
+          <p class="text-gray-600">
+            Screen resolution is the total number of pixels your physical display can show (e.g., 1920x1080),
+            while viewport size is the visible area within your browser window. The viewport is typically smaller
+            than screen resolution because it excludes browser toolbars, the address bar, and operating system
+            elements like the taskbar.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What does pixel ratio (Retina/HiDPI) mean?</h3>
+          <p class="text-gray-600">
+            Pixel ratio indicates how many physical pixels are used to render one CSS pixel. A 2x ratio (common
+            on Retina displays) means 4 physical pixels render each logical pixel, producing sharper text and
+            images. Most modern smartphones have a 2x or 3x pixel ratio, while standard desktop monitors
+            typically have a 1x ratio.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is my screen's aspect ratio and why does it matter?</h3>
+          <p class="text-gray-600">
+            Your screen's aspect ratio is the proportional relationship between its width and height. Common
+            ratios include 16:9 (widescreen), 16:10 (common on laptops), and 21:9 (ultrawide). Aspect ratio
+            matters for video playback, gaming, and productivity — a wider ratio provides more horizontal
+            workspace while a taller ratio is better for reading and coding.
+          </p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-gray-200 mt-12">
     <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
-      <p class="mb-2">© 2025 What's My IP - Free Device Information Tools</p>
+      <p class="mb-2">© 2026 What's My IP - Free Device Information Tools</p>
       <p class="text-sm mb-2">All detection happens locally in your browser. No data is stored.</p>
       <p class="text-sm">
-        <a href="https://deviceinfo.io/privacy.html"
+        <a href="/privacy.html"
            class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
       </p>
     </div>
