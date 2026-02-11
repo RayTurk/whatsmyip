@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /includes/
+Disallow: /.netlify/
 
 Sitemap: https://deviceinfo.io/sitemap.xml

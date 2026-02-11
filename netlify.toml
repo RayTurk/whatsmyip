@@ -1,3 +1,10 @@
+# Redirects
+[[redirects]]
+  from = "/device-info.html"
+  to = "/specs.html"
+  status = 301
+  force = true
+
 # HTML pages - serve stale while revalidating in background
 [[headers]]
   for = "/*.html"
