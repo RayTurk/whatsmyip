@@ -84,6 +84,46 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I check what browser I am using?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can check your browser instantly using our free online browser detection tool, which identifies your browser name, version, rendering engine, and capabilities directly in your browser. Alternatively, most browsers show version information in Settings > About or Help > About."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is it important to keep my browser updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Keeping your browser updated is critical for security, as updates patch known vulnerabilities that hackers can exploit. Updated browsers also offer better performance, new web features, and improved compatibility with modern websites. Most browsers update automatically, but you should verify you're on the latest version regularly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a user agent string?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A user agent string is a text identifier your browser sends to every website you visit. It contains information about your browser name, version, operating system, and device type. Websites use this to optimize content delivery and ensure compatibility. You can view your full user agent string using our browser detection tool."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between browser rendering engines like Blink, Gecko, and WebKit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rendering engines are the core software that processes HTML, CSS, and JavaScript to display web pages. Blink is used by Chrome, Edge, and Opera. Gecko is used by Firefox. WebKit is used by Safari. Each engine may render pages slightly differently, which is why web developers test across multiple browsers to ensure consistent appearance and behavior."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen">
@@ -261,7 +301,7 @@
     </script>
 
     <!-- SEO Content Section -->
-    <div class="bg-white rounded-xl shadow-lg p-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">About Web Browsers</h2>
       <div class="prose max-w-none text-gray-600 space-y-4">
         <p>
@@ -318,17 +358,65 @@
       </div>
     </div>
 
+    <!-- FAQ Section -->
+    <div class="mt-8 bg-white rounded-xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">How do I check what browser I am using?</h3>
+          <p class="text-gray-600">
+            You can check your browser instantly using our free online browser detection tool, which identifies
+            your browser name, version, rendering engine, and capabilities directly in your browser. Alternatively,
+            most browsers show version information in Settings > About or Help > About.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Why is it important to keep my browser updated?</h3>
+          <p class="text-gray-600">
+            Keeping your browser updated is critical for security, as updates patch known vulnerabilities that
+            hackers can exploit. Updated browsers also offer better performance, new web features, and improved
+            compatibility with modern websites. Most browsers update automatically, but you should verify you're
+            on the latest version regularly.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is a user agent string?</h3>
+          <p class="text-gray-600">
+            A user agent string is a text identifier your browser sends to every website you visit. It contains
+            information about your browser name, version, operating system, and device type. Websites use this
+            to optimize content delivery and ensure compatibility. You can view your full user agent string
+            using our browser detection tool above.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between browser rendering engines like Blink, Gecko, and WebKit?</h3>
+          <p class="text-gray-600">
+            Rendering engines are the core software that processes HTML, CSS, and JavaScript to display web pages.
+            Blink is used by Chrome, Edge, and Opera. Gecko is used by Firefox. WebKit is used by Safari. Each
+            engine may render pages slightly differently, which is why web developers test across multiple browsers
+            to ensure consistent appearance and behavior.
+          </p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-gray-200 mt-12">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-600">
-      <p class="mb-2">© 2026 What's My IP - Free Device Information Tools</p>
-      <p class="text-sm mb-2">All detection happens locally in your browser. No data is stored.</p>
-      <p class="text-sm">
-        <a href="/privacy.html"
-           class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
-      </p>
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-center md:text-left">
+          <p class="text-gray-600 mb-1">&copy; 2026 DeviceInfo.io - Free Device Information Tools</p>
+          <p class="text-sm text-gray-500">All detection happens locally in your browser. No data is stored.</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/about.html" class="text-indigo-600 hover:text-indigo-800 underline">About</a>
+          <a href="/contact.html" class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
+          <a href="/privacy.html" class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
+          <a href="/terms.html" class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
