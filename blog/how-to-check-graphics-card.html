@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K6JXCT6S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- AdSense -->
+  <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9529757615457255"
+          crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Learn how to check what graphics card (GPU) you have on Windows, Mac, and Linux. Step-by-step guide with multiple methods including Device Manager, System Information, and browser-based detection.">
+  <meta name="keywords"
+        content="how to check graphics card, what gpu do i have, find my graphics card, check gpu windows, check gpu mac, graphics card detection">
+  <title>How to Check What Graphics Card You Have (Windows, Mac, Linux) | DeviceInfo.io</title>
+
+  <link rel="canonical"
+        href="https://deviceinfo.io/blog/how-to-check-graphics-card.html">
+  <meta property="og:title"
+        content="How to Check What Graphics Card You Have (Windows, Mac, Linux)">
+  <meta property="og:description"
+        content="Learn how to check what graphics card (GPU) you have on Windows, Mac, and Linux. Step-by-step guide with multiple methods.">
+  <meta property="og:url"
+        content="https://deviceinfo.io/blog/how-to-check-graphics-card.html">
+  <meta property="og:type"
+        content="article">
+  <meta property="og:image"
+        content="https://deviceinfo.io/images/deviceinfo-io_logo.png">
+  <meta name="twitter:card"
+        content="summary_large_image">
+
+  <meta property="article:published_time"
+        content="2026-02-16">
+  <meta property="article:author"
+        content="DeviceInfo.io">
+
+  <!-- Preconnect hints -->
+  <link rel="preconnect"
+        href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch"
+        href="https://www.googletagmanager.com">
+  <link rel="preconnect"
+        href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch"
+        href="https://pagead2.googlesyndication.com">
+
+  <link rel="stylesheet"
+        href="/css/styles.css">
+
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Check What Graphics Card You Have (Windows, Mac, Linux)",
+    "description": "Learn how to check what graphics card (GPU) you have on Windows, Mac, and Linux. Step-by-step guide with multiple methods.",
+    "image": "https://deviceinfo.io/images/deviceinfo-io_logo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "DeviceInfo.io",
+      "url": "https://deviceinfo.io"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DeviceInfo.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://deviceinfo.io/images/deviceinfo-io_logo.png"
+      }
+    },
+    "datePublished": "2026-02-16",
+    "dateModified": "2026-02-16",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://deviceinfo.io/blog/how-to-check-graphics-card.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://deviceinfo.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://deviceinfo.io/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How to Check Your Graphics Card",
+        "item": "https://deviceinfo.io/blog/how-to-check-graphics-card.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Check What Graphics Card You Have",
+    "description": "Multiple methods to find your GPU on Windows, Mac, and Linux",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Use Online GPU Detector",
+        "text": "Visit DeviceInfo.io/gpu to instantly detect your graphics card through your browser using WebGL."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Check Device Manager (Windows)",
+        "text": "Right-click the Start button, select Device Manager, and expand Display adapters to see your GPU."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Use System Information (Mac)",
+        "text": "Click the Apple menu, select About This Mac, then click System Report and select Graphics/Displays."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Use Terminal (Linux)",
+        "text": "Open Terminal and run 'lspci | grep -i vga' to display your graphics card information."
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-gradient-to-br from-purple-50 to-pink-100 min-h-screen">
+  <!-- Cookie Consent Banner -->
+  <div id="consent-banner"
+       class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm">
+        <p class="font-semibold mb-1">We use cookies and similar technologies</p>
+        <p class="text-gray-300">We use cookies for analytics and ads. By clicking "Accept", you consent to our use of
+          cookies.
+          <a href="/privacy.html"
+             class="underline hover:text-white">Learn more</a>
+        </p>
+      </div>
+      <div class="flex gap-2 flex-shrink-0">
+        <button id="consent-reject"
+                class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium text-sm">
+          Reject
+        </button>
+        <button id="consent-accept"
+                class="px-6 py-2 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-medium text-sm">
+          Accept All
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6JXCT6S"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/"
+           class="flex items-center flex-shrink-0">
+          <picture>
+            <source srcset="/images/deviceinfo-io_logo.webp"
+                    type="image/webp">
+            <img src="/images/deviceinfo-io_logo.png"
+                 alt="DeviceInfo.io"
+                 class="h-8 md:h-10 w-auto"
+                 width="1536"
+                 height="370"
+                 decoding="async">
+          </picture>
+        </a>
+        <nav class="flex flex-wrap gap-2 md:gap-4 text-sm md:text-base">
+          <a href="/"
+             class="text-gray-700 hover:text-purple-600 font-medium">IP</a>
+          <a href="/screen-size"
+             class="text-gray-700 hover:text-purple-600 font-medium">Screen</a>
+          <a href="/browser"
+             class="text-gray-700 hover:text-purple-600 font-medium">Browser</a>
+          <a href="/gpu"
+             class="text-gray-700 hover:text-purple-600 font-medium">GPU</a>
+          <a href="/specs"
+             class="text-gray-700 hover:text-purple-600 font-medium">Specs</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+
+    <!-- Breadcrumb -->
+    <nav class="text-sm mb-6">
+      <ol class="flex items-center gap-2 text-gray-600">
+        <li><a href="/"
+             class="hover:text-purple-600">Home</a></li>
+        <li>›</li>
+        <li><a href="/blog/"
+             class="hover:text-purple-600">Blog</a></li>
+        <li>›</li>
+        <li class="text-gray-800">How to Check Your Graphics Card</li>
+      </ol>
+    </nav>
+
+    <!-- Article -->
+    <article class="bg-white rounded-xl shadow-lg p-8 mb-8">
+
+      <!-- Article Header -->
+      <header class="mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          How to Check What Graphics Card You Have (Windows, Mac, Linux)
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+          <time datetime="2026-02-16">February 16, 2026</time>
+          <span>•</span>
+          <span>8 min read</span>
+        </div>
+      </header>
+
+      <!-- Quick GPU Check CTA -->
+      <div class="bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl p-6 text-white mb-8">
+        <h2 class="text-xl font-bold mb-2">🎮 Check Your GPU Instantly</h2>
+        <p class="mb-4 text-purple-100">Skip the steps below — use our free online tool to detect your graphics card
+          right now.</p>
+        <a href="/gpu"
+           class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
+          Detect My GPU →
+        </a>
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose max-w-none text-gray-600">
+
+        <p class="text-lg mb-6">
+          Knowing what graphics card (GPU) is installed in your computer is essential for gaming, video editing, 3D
+          modeling, and troubleshooting display issues. Whether you're checking if your system meets a game's
+          requirements, updating drivers, or diagnosing performance problems, this guide covers every method to find
+          your GPU on any operating system.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Why You Might Need to Check Your Graphics Card</h2>
+
+        <p class="mb-4">Before diving into the methods, here are common reasons you might need to identify your GPU:</p>
+
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Gaming:</strong> Verify your GPU meets minimum or recommended requirements for a game</li>
+          <li><strong>Driver updates:</strong> Download the correct drivers from NVIDIA, AMD, or Intel</li>
+          <li><strong>Troubleshooting:</strong> Diagnose graphics-related crashes, artifacts, or performance issues</li>
+          <li><strong>Upgrading:</strong> Know what you currently have before purchasing a new GPU</li>
+          <li><strong>Software compatibility:</strong> Check if your GPU supports specific features like ray tracing,
+            CUDA, or OpenCL</li>
+          <li><strong>Selling your computer:</strong> Accurately list specifications for potential buyers</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Method 1: Use Our Free Online GPU Detector (Any OS)</h2>
+
+        <p class="mb-4">
+          The fastest way to check your graphics card is using a browser-based detection tool. Our <a href="/gpu"
+             class="text-purple-600 hover:text-purple-800 underline">GPU Detector</a> uses WebGL to identify your
+          graphics card instantly — no software installation required.
+        </p>
+
+        <p class="mb-4"><strong>How it works:</strong></p>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Visit <a href="/gpu"
+               class="text-purple-600 hover:text-purple-800 underline">deviceinfo.io/gpu</a></li>
+          <li>Your GPU model and vendor are detected automatically</li>
+          <li>View additional details like WebGL version and supported extensions</li>
+        </ol>
+
+        <p class="mb-6">
+          <strong>Limitation:</strong> Browser-based detection shows the GPU your browser is currently using. On laptops
+          with both integrated and dedicated graphics, the browser may default to the integrated GPU to save power. The
+          methods below can show all installed GPUs.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Method 2: Check Graphics Card on Windows</h2>
+
+        <p class="mb-4">Windows offers several built-in ways to view your GPU information.</p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option A: Device Manager</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Right-click the <strong>Start button</strong> (or press <code
+                  class="bg-gray-100 px-2 py-1 rounded">Win + X</code>)</li>
+          <li>Select <strong>Device Manager</strong></li>
+          <li>Expand the <strong>Display adapters</strong> section</li>
+          <li>Your graphics card(s) will be listed here</li>
+        </ol>
+
+        <p class="mb-6">If you have both integrated graphics (like Intel UHD) and a dedicated GPU (like NVIDIA GeForce),
+          both will appear in the list.</p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option B: DirectX Diagnostic Tool (dxdiag)</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Press <code class="bg-gray-100 px-2 py-1 rounded">Win + R</code> to open the Run dialog</li>
+          <li>Type <code class="bg-gray-100 px-2 py-1 rounded">dxdiag</code> and press Enter</li>
+          <li>Click the <strong>Display</strong> tab (or Display 1, Display 2 if you have multiple GPUs)</li>
+          <li>View your GPU name, manufacturer, and approximate memory</li>
+        </ol>
+
+        <p class="mb-6">The DirectX Diagnostic Tool also shows your driver version and date, which is useful for
+          troubleshooting.</p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option C: Task Manager (Windows 10/11)</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Press <code class="bg-gray-100 px-2 py-1 rounded">Ctrl + Shift + Esc</code> to open Task Manager</li>
+          <li>Click the <strong>Performance</strong> tab</li>
+          <li>Select <strong>GPU</strong> in the left sidebar</li>
+          <li>View your GPU name, utilization, memory usage, and temperature</li>
+        </ol>
+
+        <p class="mb-6">Task Manager is great for real-time monitoring and shows which GPU is being used by different
+          applications.</p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option D: System Information</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Press <code class="bg-gray-100 px-2 py-1 rounded">Win + R</code>, type <code
+                  class="bg-gray-100 px-2 py-1 rounded">msinfo32</code>, and press Enter</li>
+          <li>Expand <strong>Components</strong> → <strong>Display</strong></li>
+          <li>View detailed information including adapter type, RAM, and driver details</li>
+        </ol>
+
+        <!-- Ad Break -->
+        <div class="my-8 flex justify-center">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-9529757615457255"
+               data-ad-slot="4576835256"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Method 3: Check Graphics Card on Mac</h2>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option A: About This Mac</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Click the <strong>Apple menu</strong> () in the top-left corner</li>
+          <li>Select <strong>About This Mac</strong></li>
+          <li>Your GPU is listed next to "Graphics" on Intel Macs, or under the chip name (M1, M2, etc.) for Apple
+            Silicon Macs</li>
+        </ol>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option B: System Report (Detailed View)</h3>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+          <li>Click the <strong>Apple menu</strong> → <strong>About This Mac</strong></li>
+          <li>Click <strong>System Report</strong> (or <strong>More Info</strong> → <strong>System Report</strong> on
+            newer macOS)</li>
+          <li>Select <strong>Graphics/Displays</strong> in the left sidebar</li>
+          <li>View detailed GPU information including VRAM, vendor, and Metal support</li>
+        </ol>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Apple Silicon Macs (M1, M2, M3, M4)</h3>
+        <p class="mb-6">
+          On Apple Silicon Macs, the GPU is integrated into the Apple chip. You won't see a separate graphics card
+          listed — instead, the chip name (e.g., "Apple M2 Pro") indicates your graphics capabilities. Apple Silicon
+          GPUs are highly efficient and share unified memory with the CPU.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Method 4: Check Graphics Card on Linux</h2>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option A: lspci Command</h3>
+        <p class="mb-4">Open Terminal and run:</p>
+        <pre
+             class="bg-gray-800 text-green-400 p-4 rounded-lg mb-6 overflow-x-auto"><code>lspci | grep -i vga</code></pre>
+        <p class="mb-6">This displays your VGA-compatible graphics controller. For more detail:</p>
+        <pre
+             class="bg-gray-800 text-green-400 p-4 rounded-lg mb-6 overflow-x-auto"><code>lspci -v -s $(lspci | grep -i vga | cut -d' ' -f1)</code></pre>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option B: glxinfo (OpenGL Details)</h3>
+        <p class="mb-4">If you have mesa-utils installed:</p>
+        <pre
+             class="bg-gray-800 text-green-400 p-4 rounded-lg mb-6 overflow-x-auto"><code>glxinfo | grep "OpenGL renderer"</code></pre>
+        <p class="mb-6">Install mesa-utils if needed: <code
+                class="bg-gray-100 px-2 py-1 rounded">sudo apt install mesa-utils</code> (Debian/Ubuntu)</p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option C: inxi (Comprehensive System Info)</h3>
+        <p class="mb-4">For a user-friendly output:</p>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mb-6 overflow-x-auto"><code>inxi -G</code></pre>
+        <p class="mb-6">Install inxi if needed: <code class="bg-gray-100 px-2 py-1 rounded">sudo apt install inxi</code>
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Option D: NVIDIA-specific (nvidia-smi)</h3>
+        <p class="mb-4">If you have an NVIDIA GPU with proprietary drivers:</p>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mb-6 overflow-x-auto"><code>nvidia-smi</code></pre>
+        <p class="mb-6">This shows detailed NVIDIA GPU information including temperature, memory usage, and driver
+          version.</p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Method 5: Third-Party Tools for Detailed GPU Information
+        </h2>
+
+        <p class="mb-4">For more comprehensive GPU details than built-in tools provide, consider these free utilities:
+        </p>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">GPU-Z (Windows)</h3>
+        <p class="mb-4">
+          <a href="https://www.techpowerup.com/gpuz/"
+             class="text-purple-600 hover:text-purple-800 underline"
+             target="_blank"
+             rel="noopener">GPU-Z</a> is a lightweight utility that shows detailed graphics card information including:
+        </p>
+        <ul class="list-disc list-inside space-y-1 mb-6">
+          <li>Exact GPU model and revision</li>
+          <li>BIOS version</li>
+          <li>VRAM type and size</li>
+          <li>Clock speeds (GPU, memory, boost)</li>
+          <li>Temperature and fan speed monitoring</li>
+          <li>Driver version</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">HWiNFO (Windows)</h3>
+        <p class="mb-6">
+          <a href="https://www.hwinfo.com/"
+             class="text-purple-600 hover:text-purple-800 underline"
+             target="_blank"
+             rel="noopener">HWiNFO</a> provides comprehensive hardware information and real-time monitoring for your
+          entire system, including detailed GPU sensors.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Integrated vs. Dedicated Graphics: What's the
+          Difference?</h2>
+
+        <p class="mb-4">You might find two GPUs listed on your system. Here's what that means:</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="bg-blue-50 p-4 rounded-lg">
+            <h4 class="font-bold text-blue-800 mb-2">Integrated Graphics</h4>
+            <ul class="text-sm space-y-1 text-blue-700">
+              <li>• Built into the CPU</li>
+              <li>• Shares system RAM</li>
+              <li>• Lower power consumption</li>
+              <li>• Suitable for basic tasks</li>
+              <li>• Examples: Intel UHD, AMD Radeon Graphics, Apple Silicon GPU</li>
+            </ul>
+          </div>
+          <div class="bg-purple-50 p-4 rounded-lg">
+            <h4 class="font-bold text-purple-800 mb-2">Dedicated Graphics</h4>
+            <ul class="text-sm space-y-1 text-purple-700">
+              <li>• Separate graphics card</li>
+              <li>• Has its own VRAM</li>
+              <li>• Higher power consumption</li>
+              <li>• Much better performance</li>
+              <li>• Examples: NVIDIA GeForce RTX, AMD Radeon RX</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="mb-6">
+          Many laptops automatically switch between integrated and dedicated graphics to balance performance and battery
+          life. You can usually configure which GPU specific applications use through NVIDIA Control Panel or AMD Radeon
+          Settings.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">What to Do After Identifying Your GPU</h2>
+
+        <p class="mb-4">Now that you know what graphics card you have, here are common next steps:</p>
+
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li><strong>Update drivers:</strong> Visit <a href="https://www.nvidia.com/drivers"
+               class="text-purple-600 hover:text-purple-800 underline"
+               target="_blank"
+               rel="noopener">NVIDIA</a>, <a href="https://www.amd.com/support"
+               class="text-purple-600 hover:text-purple-800 underline"
+               target="_blank"
+               rel="noopener">AMD</a>, or <a href="https://www.intel.com/content/www/us/en/download-center/home.html"
+               class="text-purple-600 hover:text-purple-800 underline"
+               target="_blank"
+               rel="noopener">Intel</a> to download the latest drivers</li>
+          <li><strong>Check game requirements:</strong> Compare your GPU to minimum/recommended specs on Steam, Epic
+            Games, or the game's website</li>
+          <li><strong>Monitor performance:</strong> Use Task Manager (Windows) or Activity Monitor (Mac) to track GPU
+            usage</li>
+          <li><strong>Benchmark your GPU:</strong> Run tests with tools like 3DMark, Unigine Heaven, or FurMark to
+            assess performance</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Frequently Asked Questions</h2>
+
+        <div class="space-y-6 mb-6">
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Why does my browser show a different GPU than Device Manager?</h3>
+            <p>Browsers often use the integrated GPU by default to save power. Your dedicated GPU is still there — the
+              browser just isn't using it. You can force the browser to use your dedicated GPU in NVIDIA Control Panel
+              or AMD Radeon Settings.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Can I have more than one graphics card?</h3>
+            <p>Yes! Most laptops have both integrated and dedicated graphics. Desktop computers can also have multiple
+              dedicated GPUs (SLI/CrossFire for gaming, or multiple cards for professional workloads).</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">How do I know if my GPU is good enough for a specific game?</h3>
+            <p>Check the game's minimum and recommended system requirements (usually on Steam or the publisher's
+              website) and compare them to your GPU. Websites like "Can You Run It" can also automate this comparison.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">What does VRAM mean and how much do I need?</h3>
+            <p>VRAM (Video RAM) is dedicated memory on your graphics card for storing textures and frame buffers. For
+              1080p gaming, 4-6GB is typically sufficient. For 1440p or 4K, 8GB or more is recommended. Video editing
+              and 3D rendering may require even more.</p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Related Tools CTA -->
+    <div class="bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl shadow-lg p-8 text-center text-white mb-8">
+      <h3 class="text-2xl font-bold mb-2">Check More System Information</h3>
+      <p class="mb-4 text-purple-100">Explore your complete hardware specifications</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/gpu"
+           class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
+          🎮 GPU Detector
+        </a>
+        <a href="/specs"
+           class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
+          💻 Full Specs
+        </a>
+        <a href="/browser"
+           class="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-50 transition">
+          🌐 Browser Info
+        </a>
+      </div>
+    </div>
+
+    <!-- Ad Space -->
+    <div class="flex justify-center">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9529757615457255"
+           data-ad-slot="4576835256"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-center md:text-left">
+          <p class="text-gray-600 mb-1">&copy; 2026 DeviceInfo.io - Free Device Information Tools</p>
+          <p class="text-sm text-gray-500">All detection happens locally in your browser. No data is stored.</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a href="/about"
+             class="text-indigo-600 hover:text-indigo-800 underline">About</a>
+          <a href="/contact"
+             class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
+          <a href="/privacy"
+             class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
+          <a href="/terms"
+             class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Consent Management Script -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+
+    const consentStatus = localStorage.getItem('cookie_consent');
+
+    if (consentStatus === 'accepted') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+    } else if (!consentStatus) {
+      document.getElementById('consent-banner').classList.remove('hidden');
+    }
+
+    document.getElementById('consent-accept')?.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'accepted');
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'analytics_storage': 'granted'
+      });
+      document.getElementById('consent-banner').classList.add('hidden');
+    });
+
+    document.getElementById('consent-reject')?.addEventListener('click', () => {
+      localStorage.setItem('cookie_consent', 'rejected');
+      document.getElementById('consent-banner').classList.add('hidden');
+    });
+  </script>
+</body>
+
+</html>
