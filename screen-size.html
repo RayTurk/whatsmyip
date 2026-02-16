@@ -43,12 +43,17 @@
         content="summary_large_image">
 
   <!-- Preconnect hints -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect"
+        href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch"
+        href="https://www.googletagmanager.com">
+  <link rel="preconnect"
+        href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch"
+        href="https://pagead2.googlesyndication.com">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet"
+        href="/css/styles.css">
   <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>">
 
@@ -166,11 +171,13 @@
         <a href="/"
            class="flex items-center flex-shrink-0">
           <picture>
-            <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
+            <source srcset="images/deviceinfo-io_logo.webp"
+                    type="image/webp">
             <img src="images/deviceinfo-io_logo.png"
                  alt="DeviceInfo.io"
                  class="h-8 md:h-10 w-auto"
-                 width="1536" height="370"
+                 width="1536"
+                 height="370"
                  decoding="async">
           </picture>
         </a>
@@ -196,7 +203,7 @@
     <!-- Hero Section -->
     <div class="text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        What Is My Screen Size?
+        What Is My Screen Size & Resolution?
       </h1>
       <p class="text-xl text-gray-600">
         Instantly check your screen resolution, viewport size, and display specifications
@@ -208,7 +215,8 @@
       <div class="text-center mb-6">
         <p class="text-gray-600 text-lg mb-2">Your Screen Resolution</p>
         <noscript>
-          <p class="text-gray-500 mb-4">Please enable JavaScript to detect your screen size. This tool uses browser APIs to measure your screen resolution, viewport size, pixel ratio, and display properties in real-time.</p>
+          <p class="text-gray-500 mb-4">Please enable JavaScript to detect your screen size. This tool uses browser APIs
+            to measure your screen resolution, viewport size, pixel ratio, and display properties in real-time.</p>
         </noscript>
         <div id="screen-resolution"
              class="text-5xl md:text-6xl font-bold text-green-600 mb-2">
@@ -416,7 +424,8 @@
           </p>
         </div>
         <div>
-          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between screen resolution and viewport size?</h3>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between screen resolution and viewport
+            size?</h3>
           <p class="text-gray-600">
             Screen resolution is the total number of pixels your physical display can show (e.g., 1920x1080),
             while viewport size is the visible area within your browser window. The viewport is typically smaller
@@ -456,17 +465,22 @@
           <p class="text-sm text-gray-500">All detection happens locally in your browser. No data is stored.</p>
         </div>
         <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/about.html" class="text-indigo-600 hover:text-indigo-800 underline">About</a>
-          <a href="/contact.html" class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
-          <a href="/privacy.html" class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
-          <a href="/terms.html" class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
+          <a href="/about.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">About</a>
+          <a href="/contact.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
+          <a href="/privacy.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
+          <a href="/terms.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
         </nav>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js"
+          defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       detectScreenInfo();

@@ -19,19 +19,24 @@
           crossorigin="anonymous"></script>
 
   <!-- Preconnect hints -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+  <link rel="preconnect"
+        href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch"
+        href="https://www.googletagmanager.com">
+  <link rel="preconnect"
+        href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch"
+        href="https://pagead2.googlesyndication.com">
 
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="Check your GPU (graphics card) model, vendor, and specifications instantly. Free graphics card detector for gamers and developers.">
+        content="Free GPU detector - instantly check your graphics card model, vendor, and specs. Works in any browser for gamers, developers, and troubleshooting.">
+
   <meta name="keywords"
         content="what is my gpu, graphics card check, gpu detector, video card, graphics card finder">
-  <title>What Is My GPU? - Free Graphics Card Detector</title>
+  <title>What Is My GPU? - Free GPU Detector & Graphics Card Checker</title>
 
   <link rel="canonical"
         href="https://deviceinfo.io/gpu.html">
@@ -48,7 +53,8 @@
   <meta name="twitter:card"
         content="summary_large_image">
 
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet"
+        href="/css/styles.css">
   <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
 
@@ -165,11 +171,13 @@
         <a href="/"
            class="flex items-center flex-shrink-0">
           <picture>
-            <source srcset="images/deviceinfo-io_logo.webp" type="image/webp">
+            <source srcset="images/deviceinfo-io_logo.webp"
+                    type="image/webp">
             <img src="images/deviceinfo-io_logo.png"
                  alt="DeviceInfo.io"
                  class="h-8 md:h-10 w-auto"
-                 width="1536" height="370"
+                 width="1536"
+                 height="370"
                  decoding="async">
           </picture>
         </a>
@@ -207,7 +215,8 @@
       <div class="text-center mb-6">
         <p class="text-gray-600 text-lg mb-2">Your Graphics Card</p>
         <noscript>
-          <p class="text-gray-500 mb-4">Please enable JavaScript to detect your GPU. This tool uses WebGL to identify your graphics card vendor, model, and capabilities directly in your browser.</p>
+          <p class="text-gray-500 mb-4">Please enable JavaScript to detect your GPU. This tool uses WebGL to identify
+            your graphics card vendor, model, and capabilities directly in your browser.</p>
         </noscript>
         <div id="gpu-name"
              class="text-4xl md:text-5xl font-bold text-purple-600 mb-2">
@@ -357,14 +366,17 @@
           <p class="text-gray-600">
             You can find out what GPU you have by using our free online GPU detector, which uses WebGL to identify
             your graphics card model and vendor instantly in your browser. Alternatively, on Windows you can check
-            Device Manager or run dxdiag, on macOS use About This Mac > System Report, and on Linux use the lspci command.
+            Device Manager or run dxdiag, on macOS use About This Mac > System Report, and on Linux use the lspci
+            command.
           </p>
         </div>
         <div>
-          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between an integrated and dedicated GPU?</h3>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">What is the difference between an integrated and dedicated
+            GPU?</h3>
           <p class="text-gray-600">
             An integrated GPU is built into the CPU and shares system RAM, making it power-efficient but less powerful.
-            A dedicated GPU is a separate card with its own video memory (VRAM), offering significantly better performance
+            A dedicated GPU is a separate card with its own video memory (VRAM), offering significantly better
+            performance
             for gaming, video editing, 3D rendering, and other graphics-intensive tasks.
           </p>
         </div>
@@ -399,10 +411,14 @@
           <p class="text-sm text-gray-500">All detection happens locally in your browser. No data is stored.</p>
         </div>
         <nav class="flex flex-wrap gap-4 text-sm">
-          <a href="/about.html" class="text-indigo-600 hover:text-indigo-800 underline">About</a>
-          <a href="/contact.html" class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
-          <a href="/privacy.html" class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
-          <a href="/terms.html" class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
+          <a href="/about.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">About</a>
+          <a href="/contact.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Contact</a>
+          <a href="/privacy.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Privacy Policy</a>
+          <a href="/terms.html"
+             class="text-indigo-600 hover:text-indigo-800 underline">Terms of Service</a>
         </nav>
       </div>
     </div>
@@ -497,35 +513,56 @@
         const hasDepthTextures = extensions.some(ext => ext.includes('depth_texture'));
 
         const performanceHTML = `
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="border-b pb-2">
-                            <span class="font-semibold text-gray-600">Max Vertex Attributes:</span>
-                            <span class="text-gray-800 ml-2">${maxVertexAttribs}</span>
-                        </div>
-                        <div class="border-b pb-2">
-                            <span class="font-semibold text-gray-600">Max Texture Units:</span>
-                            <span class="text-gray-800 ml-2">${maxCombinedTextureImageUnits}</span>
-                        </div>
-                        <div class="border-b pb-2">
-                            <span class="font-semibold text-gray-600">Max Vertex Uniforms:</span>
-                            <span class="text-gray-800 ml-2">${maxVertexUniformVectors}</span>
-                        </div>
-                        <div class="border-b pb-2">
-                            <span class="font-semibold text-gray-600">Max Fragment Uniforms:</span>
-                            <span class="text-gray-800 ml-2">${maxFragmentUniformVectors}</span>
-                        </div>
-                        <div class="md:col-span-2">
-                            <span class="font-semibold text-gray-600">Supported Extensions:</span>
-                            <span class="text-gray-800 ml-2">${extensions.length} total</span>
-                        </div>
-                        <div class="md:col-span-2 flex flex-wrap gap-2 mt-2">
-                            ${hasAnisotropic ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Anisotropic Filtering</span>' : ''}
-                            ${hasFloatTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Float Textures</span>' : ''}
-                            ${hasDepthTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Depth Textures</span>' : ''}
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">${extensions.length} Extensions</span>
-                        </div>
-                    </div>
-                `;
+    <div class="grid md:grid-cols-2 gap-4">
+        <div class="border-b pb-2">
+            <span class="font-semibold text-gray-600">Max Vertex Attributes:</span>
+            <span class="text-gray-800 ml-2">${maxVertexAttribs}</span>
+        </div>
+        <div class="border-b pb-2">
+            <span class="font-semibold text-gray-600">Max Texture Units:</span>
+            <span class="text-gray-800 ml-2">${maxCombinedTextureImageUnits}</span>
+        </div>
+        <div class="border-b pb-2">
+            <span class="font-semibold text-gray-600">Max Vertex Uniforms:</span>
+            <span class="text-gray-800 ml-2">${maxVertexUniformVectors}</span>
+        </div>
+        <div class="border-b pb-2">
+            <span class="font-semibold text-gray-600">Max Fragment Uniforms:</span>
+            <span class="text-gray-800 ml-2">${maxFragmentUniformVectors}</span>
+        </div>
+        <div class="md:col-span-2 flex flex-wrap gap-2 mt-2">
+            ${hasAnisotropic ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Anisotropic Filtering</span>' : ''}
+            ${hasFloatTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Float Textures</span>' : ''}
+            ${hasDepthTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Depth Textures</span>' : ''}
+            <button
+                id="extensions-toggle"
+                class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition cursor-pointer flex items-center gap-1"
+                onclick="toggleExtensions()"
+            >
+                ${extensions.length} Extensions
+                <svg id="extensions-chevron" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Expandable Extensions List -->
+    <div id="extensions-list" class="hidden mt-4 pt-4 border-t">
+        <h4 class="font-semibold text-gray-700 mb-3">Supported WebGL Extensions</h4>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 max-h-64 overflow-y-auto">
+            ${extensions.map(ext => `
+                <div class="text-xs font-mono bg-gray-50 px-2 py-1 rounded text-gray-600 truncate" title="${ext}">
+                    ${ext}
+                </div>
+            `).join('')}
+        </div>
+        <p class="text-xs text-gray-500 mt-3">
+            WebGL extensions provide additional graphics capabilities beyond the core specification.
+            More extensions generally means better support for advanced rendering techniques.
+        </p>
+    </div>
+`;
         document.getElementById('performance-info').innerHTML = performanceHTML;
 
       } catch (error) {
@@ -568,6 +605,18 @@
       document.getElementById('gpu-details').innerHTML = `<p class="text-red-600">${message}</p>`;
       document.getElementById('webgl-info').innerHTML = `<p class="text-gray-500">WebGL information unavailable</p>`;
       document.getElementById('performance-info').innerHTML = `<p class="text-gray-500">Performance data unavailable</p>`;
+    }
+    function toggleExtensions() {
+      const list = document.getElementById('extensions-list');
+      const chevron = document.getElementById('extensions-chevron');
+
+      if (list.classList.contains('hidden')) {
+        list.classList.remove('hidden');
+        chevron.classList.add('rotate-180');
+      } else {
+        list.classList.add('hidden');
+        chevron.classList.remove('rotate-180');
+      }
     }
   </script>
   <!-- Consent Management Script -->
