@@ -614,10 +614,10 @@
 
       if (list.classList.contains('hidden')) {
         list.classList.remove('hidden');
-        chevron.classList.add('rotate-180');
+        chevron.style.transform = 'rotate(180deg)';
       } else {
         list.classList.add('hidden');
-        chevron.classList.remove('rotate-180');
+        chevron.style.transform = 'rotate(0deg)';
       }
     }
   </script>
