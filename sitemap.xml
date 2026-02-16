@@ -54,4 +54,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
+  <url>
+  <loc>https://deviceinfo.io/blog/</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://deviceinfo.io/blog/how-to-check-graphics-card</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://deviceinfo.io/blog/webgl-extensions-explained</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://deviceinfo.io/blog/can-my-pc-run-it</loc>
+  <lastmod>2026-02-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
