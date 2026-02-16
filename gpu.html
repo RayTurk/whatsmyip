@@ -531,16 +531,18 @@
             <span class="text-gray-800 ml-2">${maxFragmentUniformVectors}</span>
         </div>
         <div class="md:col-span-2 flex flex-wrap items-center gap-2 mt-2">
-    ${hasAnisotropic ? '<span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium">Anisotropic Filtering</span>' : ''}
-    ${hasFloatTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium">Float Textures</span>' : ''}
-    ${hasDepthTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium">Depth Textures</span>' : ''}
+    ${hasAnisotropic ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Anisotropic Filtering</span>' : ''}
+    ${hasFloatTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Float Textures</span>' : ''}
+    ${hasDepthTextures ? '<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Depth Textures</span>' : ''}
     <button
         id="extensions-toggle"
-        class="bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-purple-200 transition cursor-pointer inline-flex items-center gap-1.5 whitespace-nowrap"
+        type="button"
+        style="display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;"
+        class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition cursor-pointer"
         onclick="toggleExtensions()"
     >
-        <span>${extensions.length} Extensions</span>
-        <svg id="extensions-chevron" class="w-4 h-4 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        ${extensions.length} Extensions
+        <svg id="extensions-chevron" style="width: 16px; height: 16px; flex-shrink: 0;" class="transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg>
     </button>
